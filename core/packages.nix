@@ -12,6 +12,7 @@
             htop
             btop
             gcc
+            gh
             speedtest-cli
             pciutils
             pulseaudio
