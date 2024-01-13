@@ -9,11 +9,13 @@
     };
     packages = with pkgs; [
       alsa-utils
+      arandr
       (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono"]; })
       btop
       brightnessctl
       compsize
       curl
+      cifs_utils
       cmake
       deluge
       firefox
@@ -23,6 +25,7 @@
       glibc
       grim
       htop
+      i3lock
       mpv
       inputs.maxfetch.packages.${pkgs.system}.default
       neofetch
@@ -33,25 +36,27 @@
       pamixer
       pciutils
       playerctl
+      polybar
       roboto
       rsync
+      rofi
       slurp
+      sshuttle
+      ssvnc
       smartmontools
       speedtest-cli
-      swaybg
-      swww
-      swayidle
-      swaylock-effects
-      swaynotificationcenter
       tdesktop
       tree
       unzip
       ventoy
       via
-      waybar
       websocat
       wget
-      wofi
+		  xorg.xrandr
+		  xbrightness
+      xorg.libXt
+      xfce.xfce4-taskmanager
+      xorg.libXtst
       zig
     ];
   };
@@ -78,7 +83,7 @@
 
   imports = [
     ./themes
-    ./wayland
+    ./bspwm
     ./vscode
     ./mpd
     ./spicetify

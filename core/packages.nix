@@ -7,7 +7,6 @@
             git
             unzip
             vim
-            wget
             zip
             htop
             btop
@@ -25,7 +24,6 @@
             inputs.home-manager.packages.${pkgs.system}.home-manager
             inputs.nh.packages.${system}.default
             wireplumber
-            wl-clipboard
         ];
         pathsToLink = [ "/libexec" "/share/zsh" ];
     };

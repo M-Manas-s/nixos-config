@@ -7,6 +7,5 @@
     ./hardware-configuration.nix
     ./packages.nix
     ./zsh
-    # ./spicetify
   ];
 }

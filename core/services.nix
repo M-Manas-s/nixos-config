@@ -15,14 +15,6 @@
             };
             layout = "us";
             videoDrivers = ["nvidia"];
-            displayManager = {
-                defaultSession = "hyprland";
-                lightdm.enable = false;
-                gdm = {
-                    enable = true;
-                    wayland = true;
-                };
-            };
         };
 
         gnome.gnome-keyring.enable = true;

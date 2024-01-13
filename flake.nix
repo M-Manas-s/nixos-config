@@ -34,16 +34,6 @@
       url = "github:viperML/nh";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-  
-    hyprland = {
-      url = "github:hyprwm/Hyprland";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    hyprland-contrib = {
-      url = "github:hyprwm/contrib";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
 
     fu.url = "github:numtide/flake-utils";
 

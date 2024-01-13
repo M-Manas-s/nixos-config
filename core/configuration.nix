@@ -55,6 +55,8 @@
     shell = pkgs.zsh;
   };
 
+  users.defaultUserShell = "/run/current-system/sw/bin/zsh";
+
   #zsh
   # programs.zsh.enable = true;
   environment.shells = with pkgs; [ zsh ];
