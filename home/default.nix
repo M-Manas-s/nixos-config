@@ -83,10 +83,10 @@
 
   imports = [
     ./themes
-    ./bspwm
     ./vscode
     ./mpd
     ./spicetify
+    ./foot/foot.nix
   ];
 
   home.stateVersion = "23.05";

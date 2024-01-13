@@ -1,10 +1,5 @@
 { config, lib, pkgs, ...}: with lib;
 {
-
-    imports = [
-        ./foot.nix
-    ];
-
 	services.xserver = {
 		enable = true;
 		layout = "us";
