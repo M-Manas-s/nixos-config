@@ -6,6 +6,7 @@
     ./services.nix
     ./hardware-configuration.nix
     ./packages.nix
+    ./bspwm
     ./zsh
   ];
 }
