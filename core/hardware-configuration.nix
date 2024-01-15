@@ -10,7 +10,7 @@
     
   boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usbhid" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-intel" ];
+  boot.kernelModules = [ "kvm-intel" "i915" ];
   boot.extraModulePackages = [ ];
   boot.supportedFilesystems = [ "ntfs" ];
   # boot.kernelPackages = pkgs.linuxPackages_latest;
@@ -80,17 +80,26 @@
 
   # Graphics Stuff
 
+  environment.variables = {
+    VDPAU_DRIVER = lib.mkIf config.hardware.opengl.enable (lib.mkDefault "va_gl");
+  };
+
+  # chromium = prev.chromium.override {
+  #   # enable hardware accerlation with vaapi
+  #   commandLineArgs = "--enable-features=VaapiVideoEncoder,VaapiVideoDecoder";
+  # };
+
   hardware.opengl = {
     enable = true;
     driSupport = true;
     driSupport32Bit = true;
     extraPackages = with pkgs; [
       # intel-gmmlib
-      # intel-media-driver
+      intel-media-driver
       # intel-ocl
-      # libvdpau-va-gl
+      libvdpau-va-gl
       # vulkan-tools
-      # vaapiIntel
+      vaapiIntel
       vaapiVdpau
       # mesa.drivers
     ];
