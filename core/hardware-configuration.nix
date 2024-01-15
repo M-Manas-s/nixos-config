@@ -94,15 +94,12 @@
     driSupport = true;
     driSupport32Bit = true;
     extraPackages = with pkgs; [
-      # intel-gmmlib
-      intel-media-driver
-      # intel-ocl
-      libvdpau-va-gl
-      # vulkan-tools
-      vaapiIntel
+      nvidia-vaapi-driver
+      libva
+      libva-utils
       vaapiVdpau
-      # mesa.drivers
     ];
+    extraPackages32 = with pkgs.pkgsi686Linux; [nvidia-vaapi-driver];
   };
 
   hardware.nvidia = {
