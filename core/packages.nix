@@ -32,15 +32,6 @@
     programs = {
         dconf.enable = true;
         direnv.enable = true;
-
-        hyprland = {
-            enable = true; 
-            package = inputs.hyprland.packages.${pkgs.system}.hyprland;
-            xwayland = {
-                enable = true;
-            };
-        };
-
         # monitor backlight control
         light.enable = true;
 

@@ -13,7 +13,7 @@
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
   boot.supportedFilesystems = [ "ntfs" ];
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  # boot.kernelPackages = pkgs.linuxPackages_latest;
 
   # SSD Parititons
 
@@ -85,20 +85,20 @@
     driSupport = true;
     driSupport32Bit = true;
     extraPackages = with pkgs; [
-      intel-gmmlib
-      intel-media-driver
-      intel-ocl
-      libvdpau-va-gl
-      vulkan-tools
-      vaapiIntel
+      # intel-gmmlib
+      # intel-media-driver
+      # intel-ocl
+      # libvdpau-va-gl
+      # vulkan-tools
+      # vaapiIntel
       vaapiVdpau
-      mesa.drivers
+      # mesa.drivers
     ];
   };
 
   hardware.nvidia = {
     modesetting.enable = true;
-    open = true;
+    open = false;
     nvidiaSettings = true; 
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };

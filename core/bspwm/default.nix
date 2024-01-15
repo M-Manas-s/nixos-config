@@ -3,22 +3,19 @@
 	services.xserver = {
 		enable = true;
 		layout = "us";
-		xkbOptions = "eurosign:e";
 	    desktopManager.xfce = {
 			enable = true;
 			enableXfwm = false;
 		};
 
 	    windowManager.bspwm.enable = true;
-        windowManager.default = "bspwm";
-        windowManager.bspwm.configFile = "/home/manas/dotfiles/bspwmrc";
-        windowManager.bspwm.sxhkd.configFile= "/home/manas/dotfiles/sxhkdrc";
+        windowManager.bspwm.configFile = "/home/manas/.config/bspwm/bspwmrc";
+        windowManager.bspwm.sxhkd.configFile = "/home/manas/.config/sxhkd/sxhkdrc";
         desktopManager.xterm.enable = false;
 
-        displayManager.lightdm = {
-            enable = true;
-            autoLogin.enable = true;
-            autoLogin.user = "manas";
+        displayManager = {
+            defaultSession = "none+bspwm";
+            lightdm.enable = true;
         };
     };
 

@@ -10,19 +10,11 @@
             libinput = {
                 enable = true;
             };
-            desktopManager = {
-                xterm.enable = false;
-            };
             layout = "us";
-            videoDrivers = ["nvidia"];
+            videoDrivers = lib.mkDefault ["nvidia"];
         };
 
         gnome.gnome-keyring.enable = true;
-
-        gvfs = {
-            enable = true;
-            package = lib.mkForce pkgs.gnome3.gvfs;
-        };
 
         pipewire = {
             enable = true;
@@ -32,19 +24,18 @@
             pulse.enable = true;
         };
 
-        udev.packages = with pkgs; [
-          via
-        ];
+        # udev.packages = with pkgs; [
+        #   via
+        # ];
 
-        smartd = {
-            enable = true;
-            autodetect = true;
-        };
+        # smartd = {
+        #     enable = true;
+        #     autodetect = true;
+        # };
     };
 
     xdg.portal = {
         enable = true;
-        wlr.enable = true;
         extraPortals = with pkgs; [
             xdg-desktop-portal-gtk
         ];

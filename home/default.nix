@@ -15,7 +15,6 @@
       brightnessctl
       compsize
       curl
-      cifs_utils
       cmake
       deluge
       firefox
@@ -26,8 +25,10 @@
       grim
       htop
       i3lock
-      mpv
       inputs.maxfetch.packages.${pkgs.system}.default
+      kitty
+      linuxPackages.acpi_call
+      mpv
       neofetch
       neovide
       neovim
@@ -42,9 +43,9 @@
       rofi
       slurp
       sshuttle
-      ssvnc
       smartmontools
       speedtest-cli
+      sxhkd
       tdesktop
       tree
       unzip
@@ -82,11 +83,10 @@
   nixpkgs.config.allowUnfree = true;
 
   imports = [
-    ./themes
+    # ./themes
     ./vscode
-    ./mpd
-    ./spicetify
-    ./foot/foot.nix
+    # ./mpd
+    # ./spicetify
   ];
 
   home.stateVersion = "23.05";
