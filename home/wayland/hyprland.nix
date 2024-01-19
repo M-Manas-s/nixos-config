@@ -23,20 +23,18 @@
             "$mainMod" = "SUPER";
             monitor = [
                 "eDP-1,1920x1080,auto,1"
-                # "HDMI-A-1,preferred,-1920x0,1"
+                "HDMI-A-1,preferred,1920x0,1"
             ];
-            # workspace = [
-                # "workspace=1,monitor:eDP-1"
-                # "workspace=2,monitor:eDP-1"
-                # "workspace=3,monitor:eDP-1"
-                # "workspace=4,monitor:eDP-1"
-                # "workspace=5,monitor:eDP-1"
-                # "workspace=6,monitor:eDP-1"
-                # "workspace=7,monitor:HDMI-A-1"
-                # "workspace=8,monitor:HDMI-A-1"
-                # "workspace=9,monitor:HDMI-A-1"
-                # "workspace=10,monitor:HDMI-A-1"
-            # ];
+            workspace = [
+                "1,monitor:eDP-1"
+                "2,monitor:eDP-1"
+                "3,monitor:eDP-1"
+                "4,monitor:eDP-1"
+                "5,monitor:eDP-1"
+                "6,monitor:HDMI-A-1"
+                "7,monitor:HDMI-A-1"
+                "8,monitor:HDMI-A-1"
+            ];
             exec-once = [
                 "waybar"
                 "bash /home/manas/nixos-config/home/wayland/swww/swww.sh ~/photos/wallpapers"

@@ -63,6 +63,7 @@
     sessionVariables = {
       NIXOS_OZONE_WL = "1";
       FLAKE = "/home/manas/nixos-config";
+      __GLX_VENDOR_LIBRARY_NAME = "nvidia";
       XDG_CACHE_HOME  = "$HOME/.cache";
       XDG_CONFIG_HOME = "$HOME/.config";
       XDG_DATA_HOME   = "$HOME/.local/share";
