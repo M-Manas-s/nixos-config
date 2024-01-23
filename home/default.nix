@@ -30,6 +30,7 @@
       neofetch
       neovide
       neovim
+      nurl
       pavucontrol
       pamixer
       pciutils

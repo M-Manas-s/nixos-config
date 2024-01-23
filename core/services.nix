@@ -21,9 +21,12 @@
                 sddm = {
                     enable = true;
                     wayland.enable = true;
+                    theme = "tokyo-night";
                 };
             };
         };
+
+        redshift.enable = true;
 
         gnome.gnome-keyring.enable = true;
 
@@ -48,6 +51,10 @@
             enable = true;
             autodetect = true;
         };
+    };
+
+    location = {
+        provider = "geoclue2";
     };
 
     xdg.portal = {

@@ -2,7 +2,7 @@
 {
     # List packages installed in system profile
     environment = {
-        systemPackages =  with pkgs; let themes = pkgs.callPackage ./sddm/theme.nix {}; in [
+        systemPackages =  with pkgs; let themes = pkgs.callPackage ./sddm/themes.nix {}; in [
             curl
             git
             unzip
@@ -16,9 +16,11 @@
             speedtest-cli
             pciutils
             pulseaudio
+            libsForQt5.qt5.qtgraphicaleffects
             neofetch
             tree
             themes.sddm-sugar-dark 
+            themes.tokyo-night
             valgrind
             compsize
             smartmontools
