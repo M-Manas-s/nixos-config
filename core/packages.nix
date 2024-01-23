@@ -2,7 +2,7 @@
 {
     # List packages installed in system profile
     environment = {
-        systemPackages = with pkgs; [
+        systemPackages =  with pkgs; let themes = pkgs.callPackage ./sddm/theme.nix {}; in [
             curl
             git
             unzip
@@ -18,6 +18,7 @@
             pulseaudio
             neofetch
             tree
+            themes.sddm-sugar-dark 
             valgrind
             compsize
             smartmontools
@@ -29,6 +30,10 @@
         ];
         pathsToLink = [ "/libexec" "/share/zsh" ];
     };
+
+    # environment.systemPackages = let themes = pkgs.callPackage ./sddm/theme.nix {}; in [ 
+    #     themes.sddm-sugar-dark 
+    # ];
 
     #Programs
     programs = {

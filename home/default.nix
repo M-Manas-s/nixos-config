@@ -15,20 +15,21 @@
       compsize
       curl
       cmake
+      google-chrome
       deluge
-      firefox
+      # firefox
       foot
       gcc
       git
       glibc
       grim
       htop
+      libreoffice
       mpv
       inputs.maxfetch.packages.${pkgs.system}.default
       neofetch
       neovide
       neovim
-      obs-studio
       pavucontrol
       pamixer
       pciutils
@@ -54,6 +55,11 @@
       wofi
       zig
     ];
+  };
+
+  programs.obs-studio = {
+    enable = true;
+    # plugins = [ pkgs.obs-studio-plugins.obs-backgroundremoval ];
   };
 
   # brave

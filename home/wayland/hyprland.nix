@@ -23,7 +23,7 @@
             "$mainMod" = "SUPER";
             monitor = [
                 "eDP-1,1920x1080,auto,1"
-                "HDMI-A-1,preferred,1920x0,1"
+                "HDMI-A-1,preferred,1920x0,auto"
             ];
             workspace = [
                 "1,monitor:eDP-1"

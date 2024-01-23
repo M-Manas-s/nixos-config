@@ -18,9 +18,9 @@
             displayManager = {
                 defaultSession = "hyprland";
                 lightdm.enable = false;
-                gdm = {
+                sddm = {
                     enable = true;
-                    wayland = true;
+                    wayland.enable = true;
                 };
             };
         };

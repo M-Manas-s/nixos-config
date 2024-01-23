@@ -81,7 +81,7 @@
   # Graphics Stuff
 
   environment.variables = {
-    VDPAU_DRIVER = lib.mkIf config.hardware.opengl.enable (lib.mkDefault "va_gl");
+    VDPAU_DRIVER = lib.mkIf config.hardware.opengl.enable (lib.mkDefault "nvidia");
   };
 
   # chromium = prev.chromium.override {
@@ -94,17 +94,42 @@
     driSupport = true;
     driSupport32Bit = true;
     extraPackages = with pkgs; [
-      # intel-gmmlib
       intel-media-driver
-      # intel-ocl
       libvdpau-va-gl
       libva
       libva-utils
-      # vulkan-tools
-      # vaapiIntel
       nvidia-vaapi-driver
       vaapiVdpau
-      # mesa.drivers
+
+      # lib32-libva-mesa-driver
+      # lib32-mesa
+      # lib32-mesa-demos
+      # lib32-mesa-vdpau
+      # lib32-vulkan-mesa-layers
+      # libva-mesa-driver
+      mesa
+      mesa-demos
+      # mesa-utils
+      # mesa-vdpau
+      # vulkan-mesa-layers
+
+      # lib32-nvidia-utils
+      # lib32-opencl-nvidia
+      # mhwd-nvidia
+      # nvidia-dkms
+      # nvidia-prime
+      # nvidia-settings
+      # nvidia-utils
+      # opencl-nvidia
+
+      # lib32-libvdpau
+      # lib32-mesa-vdpau
+      # libva-vdpau-driver
+      # libvdpau
+      # libvdpau-va-gl
+      # mesa-vdpau
+      # vdpauinfo
+
     ];
     extraPackages32 = with pkgs.pkgsi686Linux; [nvidia-vaapi-driver];
   };
