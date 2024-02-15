@@ -13,6 +13,7 @@
   boot.kernelModules = [ "kvm-intel" "i915" ];
   boot.extraModulePackages = [ ];
   boot.supportedFilesystems = [ "ntfs" ];
+  boot.tmp.cleanOnBoot = true;
   # boot.kernelPackages = pkgs.linuxPackages_latest;
 
   # SSD Parititons
@@ -98,46 +99,19 @@
       libvdpau-va-gl
       libva
       libva-utils
-      nvidia-vaapi-driver
       vaapiVdpau
-
-      # lib32-libva-mesa-driver
-      # lib32-mesa
-      # lib32-mesa-demos
-      # lib32-mesa-vdpau
-      # lib32-vulkan-mesa-layers
-      # libva-mesa-driver
-      mesa
-      mesa-demos
-      # mesa-utils
-      # mesa-vdpau
-      # vulkan-mesa-layers
-
-      # lib32-nvidia-utils
-      # lib32-opencl-nvidia
-      # mhwd-nvidia
-      # nvidia-dkms
-      # nvidia-prime
-      # nvidia-settings
-      # nvidia-utils
-      # opencl-nvidia
-
-      # lib32-libvdpau
-      # lib32-mesa-vdpau
-      # libva-vdpau-driver
-      # libvdpau
-      # libvdpau-va-gl
-      # mesa-vdpau
-      # vdpauinfo
 
     ];
     extraPackages32 = with pkgs.pkgsi686Linux; [nvidia-vaapi-driver];
   };
 
+  hardware.opentabletdriver.enable = true;
+
   hardware.nvidia = {
     modesetting.enable = true;
     open = false;
-    nvidiaSettings = true; 
+    nvidiaSettings = false; 
+    forceFullCompositionPipeline = true;
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 

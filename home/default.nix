@@ -9,7 +9,7 @@
     };
     packages = with pkgs; [
       alsa-utils
-      (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono"]; })
+      (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "JetBrainsMono"]; })
       btop
       brightnessctl
       compsize
@@ -17,20 +17,19 @@
       cmake
       google-chrome
       deluge
-      # firefox
       foot
       gcc
       git
       glibc
       grim
       htop
-      libreoffice
       mpv
       inputs.maxfetch.packages.${pkgs.system}.default
       neofetch
       neovide
       neovim
       nurl
+      openboard
       pavucontrol
       pamixer
       pciutils

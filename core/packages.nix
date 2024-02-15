@@ -33,9 +33,10 @@
         pathsToLink = [ "/libexec" "/share/zsh" ];
     };
 
-    # environment.systemPackages = let themes = pkgs.callPackage ./sddm/theme.nix {}; in [ 
-    #     themes.sddm-sugar-dark 
-    # ];
+    fonts.packages = with pkgs; [
+        (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "JetBrainsMono" ]; })
+        font-awesome
+    ];
 
     #Programs
     programs = {

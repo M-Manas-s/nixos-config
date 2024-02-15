@@ -13,6 +13,7 @@
             desktopManager = {
                 xterm.enable = false;
             };
+            wacom.enable = true;
             layout = "us";
             videoDrivers = ["nvidia"];
             displayManager = {

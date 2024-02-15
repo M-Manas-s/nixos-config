@@ -38,7 +38,7 @@
             exec-once = [
                 "waybar"
                 "bash /home/manas/nixos-config/home/wayland/swww/swww.sh ~/photos/wallpapers"
-                ''swayidle -w timeout 1800 'swaylock -f -i ~/photos/wallpapers/wallpaper.png' timeout 1805 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' before-sleep "swaylock -f -i ~/photos/wallpapers/wallpaper.png"''
+                # ''swayidle -w timeout 1800 'swaylock -f -i ~/photos/wallpapers/wallpaper.png' timeout 1805 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' before-sleep "swaylock -f -i ~/photos/wallpapers/wallpaper.png"''
                 "hyprctl setcursor ${custom.cursor} ${custom.fontsize}"
                 "swaync"
             ];
@@ -127,7 +127,7 @@
                 "$mainMod SHIFT,L,exec, swaylock -f -i ~/photos/wallpapers/wallpaper.png"
                 # custom launch
                 "$mainMod, X, exec, code --disable-gpu"
-                "$mainMod, W, exec, brave --disable-gpu"
+                "$mainMod, W, exec, google-chrome-stable"
                 "$mainMod, N, exec, thunar"
                 "$mainMod SHIFT, S, exec, spotify"
                 # Window Options
